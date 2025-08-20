@@ -8,3 +8,5 @@ def test_icici_output_format():
     df = pd.read_csv("result.csv")
     expected_cols = ["Date", "Description", "Debit Amt", "Credit Amt", "Balance"]
     assert list(df.columns) == expected_cols, "CSV columns do not match"
+
+

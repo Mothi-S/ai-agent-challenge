@@ -55,6 +55,13 @@ Given a target (e.g., `icici`), the agent observes a sample PDF and expected CSV
 
 ## Agent Design (One Paragraph)
 
-The agent follows a simple loop: (1) observe — read data/<target>/ to locate one PDF and one expected CSV and extract a small sample of the PDF text; (2) plan & generate — synthesize a parser implementation template tailored to the CSV schema and visible PDF patterns (CR/DR tokens, tabular rows); (3) act — write custom_parsers/<target>_parser.py and run pytest to validate the parser output equals the expected CSV; (4) reflect — inspect the pytest failure output and apply small targeted fixes (e.g., relax regex, switch parsing mode, add IGNORECASE); (5) repeat up to 3 attempts then either succeed or save diagnostics for manual inspection. The generated parser implements parse(pdf_path) -> pd.DataFrame to match the expected CSV schema.
+The agent follows a simple loop: 
+(1) observe — read data/<target>/ to locate one PDF and one expected CSV and extract a small sample of the PDF text; 
+(2) plan & generate — synthesize a parser implementation template tailored to the CSV schema and visible PDF patterns (CR/DR tokens, tabular rows); 
+(3) act — write custom_parsers/<target>_parser.py and run pytest to validate the parser output equals the expected CSV; 
+(4) reflect — inspect the pytest failure output and apply small targeted fixes (e.g., relax regex, switch parsing mode, add IGNORECASE); 
+(5) repeat up to 3 attempts then either succeed or save diagnostics for manual inspection. The generated parser implements parse(pdf_path) -> pd.DataFrame to match the expected CSV schema.
 
+
+---
 
