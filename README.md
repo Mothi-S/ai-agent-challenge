@@ -16,19 +16,21 @@ Given a target (e.g., `icici`), the agent observes a sample PDF and expected CSV
 2. **Create & activate virtual environment, install dependencies**
 
     python -m venv .venv
+   
     # Windows
     .venv\Scripts\activate
+   
     # macOS / Linux
-    # source .venv/bin/activate
+    source .venv/bin/activate
 
     pip install -r requirements.txt
 
-3. **Place one PDF and one expected CSV into data/<bank>/:**
+4. **Place one PDF and one expected CSV into data/<bank>/:**
 
     data/icici/icici sample.pdf
     data/icici/result.csv
 
-4. **Run the agent to auto-generate the parser:**
+5. **Run the agent to auto-generate the parser:**
 
     python agent.py --target icici
 
@@ -38,7 +40,7 @@ Given a target (e.g., `icici`), the agent observes a sample PDF and expected CSV
     [Agent] Success ✅ — parser at custom_parsers/icici_parser.py
 
 
-5. **Run tests:**
+6. **Run tests:**
 
     pytest -q
 
@@ -46,7 +48,7 @@ Given a target (e.g., `icici`), the agent observes a sample PDF and expected CSV
 
     2 passed in 2.XXs
 
-6. **Requirements**
+7. **Requirements**
 
     pandas
     pdfplumber
